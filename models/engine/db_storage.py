@@ -5,7 +5,10 @@ from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker, scoped_session
 from os import getenv
 from models.base_model import Base, BaseModel
-from models.sch_acc import School, SchoolTest, Student, StudentResult, BaseModel
+from models.sch_acc import School
+from models.student import Student
+from models.school_test import SchoolTest
+from models.student_result import StudentResult
 
 classes = {
             "School": School,
@@ -34,6 +37,7 @@ class Storage:
             DB_HOST,
             DB_NAME
         ))
+        # self.__engine = create_engine('sqlite:///example123.db', echo=True)
 
     def new(self, obj):
         self.__session.add(obj)
@@ -46,6 +50,7 @@ class Storage:
             self.__session.delete(obj)
 
     def reload(self):
+        # Base.metadata.bind = self.__engine
         Base.metadata.create_all(self.__engine)
         session = sessionmaker(bind=self.__engine, expire_on_commit=False)
         Session = scoped_session(session)

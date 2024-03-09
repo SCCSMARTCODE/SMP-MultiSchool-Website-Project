@@ -3,18 +3,22 @@ this module contains the base class for all table
 """
 from datetime import datetime
 from uuid import uuid4
-from models.engine import storage, DB_TYPE
-from sqlalchemy import String, TextAsFrom, MetaData, Column, DateTime
-from sqlalchemy.orm import declarative_base
+from sqlalchemy import String, Column, DateTime, MetaData
+from sqlalchemy.ext.declarative import declarative_base
+import os
 
-metadata = MetaData()
+DB_TYPE = os.getenv('DB_TYPE')
+
+# metadata = MetaData()
 if DB_TYPE == "db":
-    Base = declarative_base()
+    metadata = MetaData()
+    Base = declarative_base(metadata=metadata)
 else:
     Base = object
 
 
 class BaseModel:
+    __abstract__ = True
 
     if DB_TYPE == "db":
         id = Column(String(60), primary_key=True)
@@ -22,6 +26,7 @@ class BaseModel:
         updated_at = Column(DateTime, nullable=False)
 
     def __init__(self, *args, **kwargs):
+        from models.engine import storage
 
         self.created_at = datetime.now()
         self.updated_at = datetime.now()
@@ -38,6 +43,7 @@ class BaseModel:
 
     @staticmethod
     def save():
+        from models.engine import storage
         storage.save()
 
     def to_dict(self):
