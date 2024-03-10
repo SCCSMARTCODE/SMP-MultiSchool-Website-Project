@@ -27,7 +27,7 @@ class Student(BaseModel, Base):
         first_name = Column(String(40), nullable=False)
         second_name = Column(String(40), nullable=False)
         school_id = Column(String(40), ForeignKey('registered_schools.id', ondelete="CASCADE"), nullable=False)
-        class_ = Column(String(20), nullable=False)
+        class_ = Column(String(20))
         gmail_address = Column(String(40), nullable=False, unique=True)
         password = Column(String(15), nullable=False, unique=True)
         status = Column(Boolean, default=False)
