@@ -3,31 +3,64 @@
 <!-- First template block1 -->
 {% block main %}
 <div class="grandcontainer">
+    
 <div class="mother_form_container">
+    <div class="col-md-8">
+        {% with messages = get_flashed_messages(with_categories=true) %}
+          {% if messages %}
+            {% for category, message in messages %}
+              <div class="alert alert-{{ category }}">
+                {{ message }}
+              </div>
+            {% endfor %}
+          {% endif %}
+        {% endwith %}
+      </div>
     <div id="form_container">
-        <form action="" method="POST">
+        <form method="POST" action="">
             {{ form.hidden_tag() }}
-            <fieldset>
-                <legend>Login to your account</legend>
-                <div>
-                    {{ form.gmail.label(class="") }}
-                    {{ form.gmail(class="myclass") }}
+            <fieldset class="form-group">
+                <legend class="border-bottom mb-4">Log In</legend>
+                <div class="form-group">
+                    {{ form.gmail.label(class="form-control-label") }}
+                    {% if form.gmail.errors %}
+                        {{ form.gmail(class="form-control form-control-lg is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.gmail.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.gmail(class="form-control form-control-lg") }}
+                    {% endif %}
                 </div>
-                <div>
-                    {{ form.password.label(class="") }}
-                    {{ form.password(class="") }}
+                <div class="form-group">
+                    {{ form.password.label(class="form-control-label") }}
+                    {% if form.password.errors %}
+                        {{ form.password(class="form-control form-control-lg is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.password.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.password(class="form-control form-control-lg") }}
+                    {% endif %}
                 </div>
-                <div>
-                    {{ form.remember.label(class="") }}
-                    {{ form.remember(class="") }}
-                </div>
-                <div>
-                    {{ form.submit(class="") }}
+                <div class="form-check">
+                    {{ form.remember(class="form-check-input") }}
+                    {{ form.remember.label(class="form-check-label") }}
                 </div>
             </fieldset>
+            <div class="form-group">
+                {{ form.submit(class="btn btn-outline-info") }}
+            </div>
+            <small class="text-muted ml-2">
+                <a href="#">Forgot Password?</a>
+            </small>
         </form>
     </div>
-    <div>
+    <div class="border-top pt-3">
         <small>
             Don't have an account?<br>
             <a href="{{ url_for('school_reg') }}" style="margin-left: 50px;">School-Registration</a>

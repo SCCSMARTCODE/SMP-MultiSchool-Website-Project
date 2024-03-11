@@ -14,9 +14,9 @@ for key in info.keys():
 
 class StudentRegistrationForm(FlaskForm):
     first_name = StringField("First Name", validators=[DataRequired(), Length(min=4, max=40)])
-    second_name = StringField("Second Name", validators=[DataRequired(), Length(min=4, max=40)])
+    last_name = StringField("Last Name", validators=[DataRequired(), Length(min=4, max=40)])
     school = SelectField("Select School", choices=list_of_schools, validators=[DataRequired()])
     gmail = StringField("Gmail Address", validators=[DataRequired(), Email()])
     password = PasswordField("New password", validators=[DataRequired(), Length(min=7, max=19)])
-    confirm_password = PasswordField("Confirm password", validators=[DataRequired(), EqualTo(password)])
+    confirm_password = PasswordField("Confirm password", validators=[DataRequired(), EqualTo('password')])
     submit = SubmitField("Sign up")

@@ -10,7 +10,7 @@ class SchoolRegistrationForm(FlaskForm):
     gmail = StringField("School Gmail Address", validators=[DataRequired(), Email()])
     phone_address = TelField("School Phone Address", validators=[DataRequired()])
     password = PasswordField("New password", validators=[DataRequired(), Length(min=7, max=19)])
-    confirm_password = PasswordField("Confirm password", validators=[DataRequired(), EqualTo(password)])
+    confirm_password = PasswordField("Confirm password", validators=[DataRequired(), EqualTo('password')])
     submit = SubmitField("Sign up")
 
 

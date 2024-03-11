@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SMP - {{ title }}</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='/styles/home.css') }}">
-    <link rel="shortcut icon" href="{{ url_for('static', filename='/images/smp.ico') }}" type="image/x-icon">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='/images/smp1.ico') }}" type="image/x-icon">
     <!-- font awesome cdn links -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
@@ -27,13 +27,14 @@
         <!-- <img src="../../static/images/smp_page1.png" alt="smp_logo" id="smp_logo"> -->
         <!-- <a href="{{ url_for('home') }}" class="logolink">SMP@SCHOOL</a> -->
         <span class="logo"><span class="head">SMP</span> <span class="text">Multischool Website</span></span>
+        
         <div class="navigation">
             <ul class="menu">
                 <li><a href="{{ url_for('home') }}">Home</a></li>
                 <li><a href="{{ url_for('about_us') }}">About</a></li>
-                <li><a href="#">Blog</a></li>
+                <!-- <li><a href="#">Blog</a></li> -->
                 <!-- <li><a href="#">Courses</a></li> -->
-                <li><a href="#">Contact</a></li>
+                <li><a href="{{ url_for('contact') }}">Contact</a></li>
                 <!-- <li></li> -->
                 <li class="dropdown">
                     <a href="#" class="dropbtn">Sign up</a>

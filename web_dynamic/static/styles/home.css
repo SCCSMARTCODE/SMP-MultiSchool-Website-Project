@@ -55,17 +55,17 @@ header {
 /* Style the dropdown button */
 .dropdown {
     display: inline-block;
-    border-radius: 20px;
+    /* border-radius: 20px; */
 }
 
 .dropdown-content {
     display: none;
-    position: absolute;
+    position:fixed;
     background-color: #ffffff;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
-    border-radius: 20px;
+    border-radius: 10px;
 }
 
 .dropdown-content a {
@@ -77,8 +77,8 @@ header {
 }
 
 .dropdown-content a:hover {
-    background-color: #d7dce7;
-    border-radius: 20px;
+    background-color: #f7f7f7;
+    border-radius: 10px;
 }
 
 .dropdown:hover .dropdown-content {
@@ -89,7 +89,7 @@ header {
 nav {
     position: sticky;
     width: fit-content;
-    /* top: 0; left: 0; right: 0; */
+    
     top: 0;
     justify-content: space-between;
     width: 100%;
@@ -101,10 +101,10 @@ nav {
     box-shadow: 1px 1px 1px rgb(0, 0, 0.15);
     z-index: 1;
 }
-nav img {
+/* nav img {
     width: 100px;
     cursor: pointer;
-}
+} */
 nav .navigation ul {
     display: flex;
     justify-content: flex-end;
@@ -404,7 +404,7 @@ nav .navigation ul li a:hover{
 /* Container styling */
 .mother_form_container {
     width: 100%;
-    max-width: 400px; /* Adjust max-width as needed */
+    max-width: 500px; /* Adjust max-width as needed */
     margin: 0 auto;
     padding: 20px;
     background-color: #f9f9f9;
@@ -483,4 +483,51 @@ span.logo .head{
 span.logo .text{
     font-size: 30px;
     font-weight: 400;
+}
+span.logo{
+    position: fixed;
+    top: 0;
+}
+.alert{
+    width: 100%;
+    position: absolute;
+}
+
+/* Bootstrap classes */
+.container, .row, .col-md-4 {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Home-specific classes */
+.home-footer {
+    background-color: #f8f9fa;
+    padding: 40px 0;
+    color: #6c757d;
+}
+
+.home-heading {
+    color: #343a40;
+}
+
+.home-list {
+    list-style: none;
+    padding: 0;
+}
+
+.home-list li {
+    margin-bottom: 10px;
+}
+
+.home-link {
+    color: #6c757d;
+    text-decoration: none;
+}
+
+.home-link:hover {
+    color: #343a40;
+}
+
+.home-text {
+    color: #6c757d;
 }
