@@ -1,0 +1,486 @@
+/*CSS COMMENT*/
+*{   
+    margin: 0;
+    padding: 0;
+    border: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+:root {
+    --color-dark: #181d38;
+    --color-success:#06BBCC;
+    --color-warning: #FFC107;
+    --color-danger: #FF5722;
+    --color-danger-variant: rgba(66, 244, 247, 0.5);
+    --color-white: #fff;
+    --color-black: #000;
+    --color-bg: #1f2641;
+    --color-bg1: #2e3267;
+    --color-b2: #424890;
+    --container-width:-lg: 76%;/* Default value for other screen sizes*/
+    --container-width:-md: 90%;
+    --container-width:-sm: 94%;
+    --transition: all 400ms ease;
+}
+
+/* styles.css */
+
+/* Style the header */
+header {
+    background-color: #333;
+    padding: 10px 0;
+}
+
+/* Style the navigation menu */
+.menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.menu li {
+    float: left;
+}
+
+.menu li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* Style the dropdown button */
+.dropdown {
+    display: inline-block;
+    border-radius: 20px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 20px;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: #d7dce7;
+    border-radius: 20px;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/*navigation*/
+nav {
+    position: sticky;
+    width: fit-content;
+    /* top: 0; left: 0; right: 0; */
+    top: 0;
+    justify-content: space-between;
+    width: 100%;
+    background-color: var(--color-white);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 1vw 8vw;
+    box-shadow: 1px 1px 1px rgb(0, 0, 0.15);
+    z-index: 1;
+}
+nav img {
+    width: 100px;
+    cursor: pointer;
+}
+nav .navigation ul {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+nav .navigation ul li{
+    list-style: none;
+    margin-left: 30px;
+
+}
+nav .navigation ul li a {
+    color: var(--color-dark);
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 400;
+    transition: 0.3s ease;
+    font-family:fantasy;
+}
+nav .navigation ul li a:hover{
+    color: var(--color-success);
+    transition: 0.3s ease;
+}
+
+/* home section */
+#home {
+    background-image: linear-gradient(rgba(79, 75, 122, 0.316), rgba(148, 148, 242, 0.7)), url(../../static/images/graduation\ bg.jpg);
+    width: 100%;
+    height: 100vh;
+    padding-top: 25px;
+    background-size: cover;
+    background-position: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+#home h2 {
+    color: var(--color-white);
+    letter-spacing: 1px;
+    font-size: 2.2rem;
+
+}
+#home p {
+    color: var(--color-white);
+    width: 50%;
+    line-height: 25px;
+    font-size: 1rem;
+}
+#home .btn{
+    margin-top: 30px
+}
+#home a{
+    padding: 13px 35px;
+    font-size: 0.9rem;
+    text-decoration: none;
+    background-color: var(--color-white);
+    font-weight: 600;
+    border-radius: 5px;
+}
+#home a.skyblue{
+    color: var(--color-white);
+    background-color: var(--color-success);
+    transition: 0.3s ease;
+}
+#home a.skyblue:hover {
+    color: var(--color-success);
+    background-color: var(--color-white);
+}
+#home a.yellow {
+    color: var(--color-warning);
+    background-color: var(--color-white);
+    transition: 0.3s ease;
+}
+#home a.yellow:hover {
+    color: var(--color-black);
+    background-color: var(--color-warning);
+}
+
+/* feature */
+#features {
+   padding: 3vw 6vw 0vw 6vw;
+   text-align: center;
+}
+#features .feature-base{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    gap: 2rem;
+}
+#features .feature-base .fea-box{
+    padding: 3rem 2rem;
+    text-align: center;
+    border: .1rem solid var(--color-success);
+    background: rgb(240, 241, 240);
+    margin-top: 35px;
+    cursor: pointer;
+}
+#features .fea-box{
+    background-color: rgb(rgb(151, 150, 150));
+    text-align: start;
+}
+#features .fea-box i{
+    font-size: 2.3rem;
+    color: var(--color-success);
+}
+#features .fea-box h3{
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding: 13px 0 7px 0;
+    color: var(--color-bg1)
+}
+#features .fea-box p{
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--color-bg2);
+}
+/* course */
+#course{
+    padding: 8vw 8vw 0 8vw;
+    text-align: center;
+    cursor: pointer;
+}
+#course .course-box{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 1rem;
+    margin-top: 50px;
+}
+#course .courses{
+    height: 100%;
+    text-align: start;
+    background-color: rgb(250, 250, 250);
+    position: relative;
+}
+#course .courses img{
+    width: 100%;
+    height: 60%;
+    background-size: cover;
+    background-position: center;
+}
+#course .courses .details{
+    padding: 15% 15% 0 15%;
+}
+#course .courses .details i{
+    font-size: .9rem;
+    color: #FFC107;
+}
+#course .courses .cost{
+    width: 70px;
+    height: 70px;
+    line-height: 70px;
+    background-color: var(--color-success);
+    color: var(--color-white);
+    text-align: center;
+    border-radius: 50%;
+    position: absolute;
+    right: 15px;
+    bottom: 100px;
+}
+
+/* registration */
+#registration{
+    padding: 6vw 8vw 6vw 8vw;
+    background-image: linear-gradient(rgba(160, 160, 226, 0.316), rgba(7, 43, 58, 0.7)), url(sch1.jpg);
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+#registration .reminder{
+    color: var(--color-white);
+}
+#registration .reminder h1{
+    color: var(--color-white);
+}
+#registration .reminder .time{
+    display: flex;
+    margin: 40px;
+
+}
+#registration .reminder .time .date{
+    text-align: center;
+    padding: 13px 33px;
+    background-color: var(--color-success);
+    backdrop-filter: blur(4px);
+    box-shadow: 0 8px 32px 0 rgba(81, 81, 108, 0.316);
+    border-radius: 10px;
+    border: 1px solid var(--color-success);
+    margin: 0 5px 10px 5px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition: 0.3s ease;
+    cursor: pointer;
+
+}
+#registration .reminder .time .date:hover{
+    transition: 0.3s ease;
+    background-color: var(--color-white);
+    color: var(--color-success);
+}
+#registration .form{
+    background-color: var(--color-white);
+    flex-direction: column;
+    display: flex;
+    border-radius: 6px;
+    padding: 30px;
+    box-shadow: 0 8px 32px 0 rgba(165, 201, 220, 0.462);
+}
+#registration .form input{
+    padding: 15px 10px;
+    margin: 15px 0;
+    border: 1px solid var(--color-bg1);
+    outline: none;
+}
+#registration .form input::placeholder{
+    color: var(--color-bg);
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+#registration .form .btn{
+    margin-top: 20px;
+}
+#registration .form a.yellow {
+    color: var(--color-warning);
+    background-color: var(--color-success);
+    transition: 0.3s ease;
+    padding: 13px 35px;
+    font-size: 0.9rem;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 5px;
+}
+#registration a.yellow:hover {
+    color: var(--color-white);
+    background-color: var(--color-warning);
+}
+
+ /*experts  */
+ #experts{
+    padding: 8vw 8vw 0 8vw;
+    text-align: center;
+    cursor: pointer;
+ }
+ #experts .expert-box{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    margin-top: 50px; ;
+ }
+#experts .expert-box .profile{
+    background-color: #fafaf1;
+    padding: 30px 10px;
+    
+}
+#experts .expert-box .profile img{
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+
+}
+.pro-link{
+    margin-top: 10px;
+}
+.pro-link i{
+    padding: 10px 13px;
+    border: 1px solid var(--color-success);
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+.pro-link i:hover{
+    color: var(--color-white);
+    background-color: var(--color-success);
+    border: 1px solid var(--color-success);
+    cursor: pointer;
+}
+
+#smp_logo{
+    height: 8%;
+    width: 8%;
+}
+
+.container {
+    transition: transform 0.3s, width 0.3s, height 0.3s;
+}
+
+.container:hover {
+    transform: scale(1.01);
+}
+
+/* Add this CSS code to your stylesheet */
+
+/* Container styling */
+.mother_form_container {
+    width: 100%;
+    max-width: 400px; /* Adjust max-width as needed */
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+.grandcontainer{
+    display: block;
+    /* margin-top: 10vh; */
+    background-color: #0056b3;
+    padding: 10vh;
+}
+
+/* Form styling */
+#form_container {
+    margin-bottom: 20px;
+}
+
+/* Legend styling */
+fieldset legend {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Form input styling */
+div {
+    margin-bottom: 10px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.selectschool,
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[name="phone_address"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+/* Submit button styling */
+input[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* Small link below form */
+.small-link {
+    font-size: 0.8em;
+}
+
+span.logo .head{
+    font-size: 60px;
+    font-weight: 300;
+    color: #000;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+span.logo .text{
+    font-size: 30px;
+    font-weight: 400;
+}

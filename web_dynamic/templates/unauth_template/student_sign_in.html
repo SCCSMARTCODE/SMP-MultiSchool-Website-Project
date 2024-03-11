@@ -1,0 +1,50 @@
+{% extends "unauth_template/first_layout.html" %}
+
+<!-- First template block1 -->
+{% block main %}
+<div class="grandcontainer">
+<div class="mother_form_container">
+    <div id="form_container">
+        <form action="" method="POST">
+            {{ form.hidden_tag() }}
+            <fieldset>
+                <legend>Student Registation</legend>
+                <div>
+                    {{ form.first_name.label(class="") }}
+                    {{ form.first_name(class="") }}
+                </div>
+                <div>
+                    {{ form.second_name.label(class="") }}
+                    {{ form.second_name(class="") }}
+                </div>
+                <div>
+                    {{ form.school.label(class="") }}
+                    {{ form.school(class="selectschool") }}
+                </div>
+                <div>
+                    {{ form.gmail.label(class="") }}
+                    {{ form.gmail(class="") }}
+                </div>
+                <div>
+                    {{ form.password.label(class="") }}
+                    {{ form.password(class="") }}
+                </div>
+                <div>
+                    {{ form.confirm_password.label(class="") }}
+                    {{ form.confirm_password(class="") }}
+                </div>
+                <div>
+                    {{ form.submit(class="") }}
+                </div>
+            </fieldset>
+        </form>
+    </div>
+    <div>
+        <small>
+            Already have an account?
+            <a href="{{ url_for('login') }}">Login</a>
+        </small>
+    </div>
+</div>
+</div>
+{% endblock main %}

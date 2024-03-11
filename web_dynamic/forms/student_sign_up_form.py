@@ -3,7 +3,7 @@ from wtforms import StringField, SubmitField, PasswordField, SelectField
 from wtforms.validators import DataRequired, Email, Length, EqualTo
 from models.engine import storage
 
-info = storage.all("School")
+info = storage.all('School')
 id_ = 1
 list_of_schools = []
 for key in info.keys():
