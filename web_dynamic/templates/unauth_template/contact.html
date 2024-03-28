@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SMP - {{ title }}</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='/styles/home.css') }}">
-    <link rel="shortcut icon" href="{{ url_for('static', filename='/images/smp.ico') }}" type="image/x-icon">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='/images/smp1.ico') }}" type="image/x-icon">
     <!-- font awesome cdn links -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
@@ -144,13 +144,24 @@ footer {
     </nav>
      
     <main>
+        <div class="col-md-8"style="margin-left: 28.5%;">
+            {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                {% for category, message in messages %}
+                <div class="flash-message {{ category }}" style="text-align: center; width: 30vw; margin-left: 5%;">
+                    {{ message }}
+                </div>
+                {% endfor %}
+            {% endif %}
+            {% endwith %}
+          </div>
         <section class="contact-form">
             <h2>Get In Touch</h2>
             <form action="#" method="post">
                 <label for="name">Name:</label>
                 <input type="text" id="name" name="name" required>
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
+                <label for="gmail">Gmail:</label>
+                <input type="gmail" id="gmail" name="gmail" required>
                 <label for="message">Message:</label>
                 <textarea id="message" name="message" required></textarea>
                 <button type="submit">Submit</button>

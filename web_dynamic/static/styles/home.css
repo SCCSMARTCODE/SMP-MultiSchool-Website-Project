@@ -60,12 +60,13 @@ header {
 
 .dropdown-content {
     display: none;
-    position:fixed;
+    position: fixed;
     background-color: #ffffff;
-    min-width: 160px;
+    min-width: 180px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
     border-radius: 10px;
+    margin-left: -30px;
 }
 
 .dropdown-content a {
@@ -531,3 +532,38 @@ span.logo{
 .home-text {
     color: #6c757d;
 }
+
+/* Flash message container */
+.flash-message {
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  /* Success flash message */
+  .flash-message.success {
+    background-color: #28a745;
+    color: #fff;
+  }
+  
+  /* Error flash message */
+  .flash-message.danger {
+    background-color: #dc3545;
+    color: #fff;
+  }
+  
+  /* Warning flash message */
+  .flash-message.warning {
+    background-color: #ffc107;
+    color: #000;
+  }
+  
+  /* Info flash message */
+  .flash-message.info {
+    background-color: #17a2b8;
+    color: #fff;
+  }
+  

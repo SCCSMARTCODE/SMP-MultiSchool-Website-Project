@@ -5,16 +5,22 @@ from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker, scoped_session
 from os import getenv
 from models.base_model import Base, BaseModel
-from models.sch_acc import School
-from models.student import Student
-from models.school_test import SchoolTest
-from models.student_result import StudentResult
+from models.sch_acc import Classes, School, ProfilePic, SchoolStrictUsers
+from models.student import Student, Notification
+from models.school_test import SchoolTest, SchoolFiles
+from models.student_result import StudentResult, StudentSubmit
 
 classes = {
             "School": School,
             "SchoolTest": SchoolTest,
             "Student": Student,
-            "StudentResult": StudentResult
+            "StudentResult": StudentResult,
+            "Classes": Classes,
+            'SchoolFiles': SchoolFiles,
+            'StudentSubmit': StudentSubmit,
+            'Notification': Notification,
+            'ProfilePic': ProfilePic,
+            'SchoolStrictUsers': SchoolStrictUsers
         }
 
 
@@ -37,13 +43,16 @@ class Storage:
             DB_HOST,
             DB_NAME
         ))
-        # self.__engine = create_engine('sqlite:///example123.db', echo=True)
+        # self.__engine = create_engine('sqlite:///example12311.db', echo=True)
 
     def new(self, obj):
         self.__session.add(obj)
 
     def save(self):
         self.__session.commit()
+
+    def session(self):
+        return self.__session
 
     def delete(self, obj=None):
         if obj:

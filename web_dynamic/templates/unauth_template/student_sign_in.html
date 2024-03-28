@@ -3,9 +3,20 @@
 <!-- First template block1 -->
 {% block main %}
 <div class="grandcontainer">
+    <div class="col-md-8"style="margin-left: 15%;">
+        {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+            {% for category, message in messages %}
+            <div class="flash-message {{ category }}" style="text-align: center; width: 30vw; margin-left: 27%;">
+                {{ message }}
+            </div>
+            {% endfor %}
+        {% endif %}
+        {% endwith %}
+      </div>
     <div class="mother_form_container">
         <div id="form_container">
-            <form action="" method="POST">
+            <form action="/student-registration" method="POST">
                 {{ form.hidden_tag() }}
                 <fieldset>
                     <legend>Student Registration</legend>

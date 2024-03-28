@@ -1,0 +1,132 @@
+{% extends 'auth_template/school_admin/third_layout.html' %}
+
+
+ {% block style %}
+ <style>
+     table {
+         width: 100%;
+         border-collapse: collapse;
+     }
+ 
+     th, td {
+         padding: 10px;
+         border-bottom: 1px solid #ddd;
+         text-align: left;
+     }
+ 
+     th {
+         background-color: #f1d4d4;
+         padding: 15px;
+     }
+ 
+     .expand-btn, button {
+         background-color: #5271f8;
+         border: none;
+         color: white;
+         padding: 8px 12px;
+         text-align: center;
+         text-decoration: none;
+         display: inline-block;
+         font-size: 14px;
+         cursor: pointer;
+         border-radius: 4px;
+     }
+     .expand-btn:hover, button:hover{
+         background-color: #002fff;
+     }
+ 
+     .expand-btn:focus{
+         outline-color: rgb(127, 204, 255);
+     }
+  
+     .student-info {
+         display: none;
+     }
+ 
+     .show {
+         display: table-row;
+     }
+     .data{
+         /* background-color: #cecfd1; */
+         padding: 10px;
+         line-height: 100%;
+         border-radius: 5px;
+         box-shadow: 2px 2px 2px rgb(180, 176, 176), -2px -2px 2px rgb(180, 176, 176);
+     }
+     .data .name{
+         font-family: cursive;
+         width: 40%;
+         margin-right: 10%;
+     }
+     .data a, .data .score{
+         width: 30%;
+         margin-right: 20%;
+     }
+     .data .score{
+         background-color: antiquewhite;
+         padding: 10px;
+         border-radius: 10px;
+         font-family: monospace;
+     }
+ </style>
+{% endblock style %}
+
+
+{% block main %}
+<table>
+    <thead>
+      <tr>
+        <th>Test Description</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+    {% for data in datas %}
+        <tr class="test-row">
+            <td>{{ data.description }}</td>
+            <td>
+            <button class="expand-btn">Expand</button>
+            </td>
+        </tr>
+        
+
+        <tr class="student-info">
+            <td colspan="2">
+              <!-- Student information will be displayed here -->
+              <ol>
+                {% for student_data in data.results %}
+                    <li class="data"><span class="name">{{ student_data.student.first_name }} {{ student_data.student.last_name }}</span> <a href="{{ url_for('school_view', id_=student_data.id) }}" target="_blank"><button>Check</button></a> <span class="score">Score: {{ student_data.score }}%</span></li>
+                {% endfor %}
+              </ol>
+            </td>
+            
+          </tr>
+
+    {% endfor %}
+      
+      
+       
+    </tbody>
+</table>
+
+
+{% endblock main %}
+
+
+
+{% block script %}
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+const expandButtons = document.querySelectorAll('.expand-btn');
+
+expandButtons.forEach(button => {
+    button.addEventListener('click', function() {
+    const studentInfoRow = this.closest('.test-row').nextElementSibling;
+    studentInfoRow.classList.toggle('show');
+    });
+});
+});
+</script>
+
+{% endblock script %}

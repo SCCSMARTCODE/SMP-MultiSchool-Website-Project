@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pending Account</title>
+    <title>Quick Notification</title>
+    <link rel="shortcut icon" href="{{ url_for('static', filename='/images/smp1.ico') }}" type="image/x-icon">
     <link rel="stylesheet" href="{{ url_for('static', filename='/styles/pending_acc.css') }}">
 </head>
 <body class="pendbody">
@@ -18,7 +19,7 @@
     <script>
         setTimeout(function() {
             window.location.href = "{{ url_for('home') }}";
-        }, 5000); // Redirect after 5 seconds (5000 milliseconds)
+        }, 9000); // Redirect after 5 seconds (5000 milliseconds)
     </script>
 </body>
 </html>

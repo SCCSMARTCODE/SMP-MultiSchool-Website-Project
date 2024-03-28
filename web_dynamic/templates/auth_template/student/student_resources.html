@@ -1,0 +1,31 @@
+{% extends 'auth_template/student/second_layout.html' %}
+
+{% block main %}
+
+<div class="available test">
+    <div class="available test-head">
+        <h2 class="logo"><i class="fa-solid fa-pen"></i><i class="fa-solid fa-book"></i></h2><span class="header">Resources</span>  
+    </div>
+    <div class="available test-content" style="height: 80vh;"><hr><hr>
+        <!-- dynamic section -->
+
+        <div class="resources">
+
+            {% for file in resources %}
+                        <div class="student-resources">
+                            <div class="description-space">
+                                <h3>Desc: <small> {{ file.description }}</small></h3>
+                                <h3>Type: <small> {{ file.file_ext }}</small></h3>
+                            </div>
+                            <div class="colored-space">
+                                
+                            </div>
+                            <a href="{{ url_for('student_view', id_=file.id) }}" target="_blank"><button>Read Resources</button></a>
+                        </div>
+            {% endfor %}
+        </div>
+
+    </div>
+</div>
+
+{% endblock main %}

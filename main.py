@@ -12,7 +12,7 @@ from models.sch_acc import School
 from models.engine import storage
 
 
-my_model = School(address="admin111", gmail="admin111", phone_address="admin111", password="admin111")
+my_model = School(address="admin", gmail="admin", phone_address="admin", password="admin", role='admin')
 my_model.name = "Admin school111......"
 my_model.my_number = 89111
 print(my_model)

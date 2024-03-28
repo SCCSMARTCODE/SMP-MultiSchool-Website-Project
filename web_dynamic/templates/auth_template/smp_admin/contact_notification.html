@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+    <link rel="shortcut icon" href="{{ url_for('static', filename='/images/smp1.ico') }}" type="image/x-icon">
+    <link rel="stylesheet" href="{{ url_for('static', filename='/styles/smp_admin_dash_styles.css') }}">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    
+<style>
+
+    .notification{
+        max-width: 70%;
+        width: 50%;
+        float: right;
+        margin-right: 10%;
+        background-color: aliceblue;
+        padding: 15px;
+        border-radius: 10px;
+        box-shadow: 2px 2px 2px rgb(102, 101, 101);
+        margin-bottom: 5%;
+    }
+    legend{
+        box-shadow: 2px 2px 2px rgb(102, 101, 101);
+        /* border: 2px solid red; */
+        /* text-align: center; */
+        border-radius: 20px;
+        padding: 10px;
+        background-color: aquamarine;
+        font-family: monospace;
+        font-weight: 900;
+    }
+    p{
+        text-indent: 20px;
+        text-align: justify;
+        font-family:serif;
+        font-weight: 400;
+        font-size: large;
+    }
+
+</style>
+</head>
+<body style="background-color: rgb(180, 180, 180);">
+    <header>
+        <div class="">
+            <div class="head">
+                <h1>SMP Admin Dashboard</h1><hr><hr>
+            </div>
+            
+           
+            <nav class="">
+                <ul>
+                    <li><a href="{{ url_for('home') }}" class="active">home</a></li>
+                    <li><a href="{{ url_for('admin_dashboard1') }}">Active Schools</a></li>
+                    <li><a href="{{ url_for('admin_dashboard2') }}">Inactive Schools</a></li>
+                    <li><a href="{{ url_for('admin_dashboard3') }}">Manage Activeness</a></li>
+                    <li><a href="{{ url_for('admin_dashboard4') }}">Contact Notification</a></li>
+                    <li><a href="{{ url_for('logout') }}" class="logout">logout</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main >
+        <div class="col-md-8">
+            {% with messages = get_flashed_messages(with_categories=true) %}
+              {% if messages %}
+                {% for category, message in messages %}
+                  <div class="alert alert-{{ category }}" style="text-align: center; width: 30vw; margin-left: 60%;">
+                    {{ message }}
+                  </div>
+                {% endfor %}
+              {% endif %}
+            {% endwith %}
+          </div>
+
+
+          {% if datas %}
+            {% for data in datas %}
+            <div class="notification">
+                <fieldset>
+                    <legend><b>Name:</b> <small>{{ data.name }}</small> <b>Email:</b> <small>{{ data.gmail }}</small> <br><b>Date:</b> <small>{{ data.time }}</small></legend>
+                    <p>
+                        {{ data.message }}
+                    </p>
+            </div>
+            {% endfor %}
+          {% endif %}
+           
+    </main>
+    
+
+    <footer>
+        <!-- Footer Content Goes Here -->
+    </footer>
+</body>
+</html>
+
+ 

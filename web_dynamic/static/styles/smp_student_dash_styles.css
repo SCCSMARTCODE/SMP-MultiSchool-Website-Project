@@ -1,0 +1,458 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+    background-color: aliceblue;
+  }
+
+ 
+  
+  .username{
+      /* text-wrap: nowrap; */
+      text-overflow: ellipsis;
+      padding: 10px;
+      max-width: 100%;
+      background-color: rgb(255, 255, 255);
+      white-space: nowrap;
+      overflow: hidden;
+      font-size: 30px;
+      font-family: 'Courier New', Courier, monospace;
+      box-shadow: 2px 2px 1px rgb(94, 94, 94);
+      border-radius: 10px;
+  }
+  /* Create three equal columns that floats next to each other */
+  .column1 {
+    overflow: scroll;
+
+    float: left;
+    width: 20%;
+    padding: 15px;
+    height: 100%;
+    position: fixed;
+    background-color: rgb(0, 4, 255);
+    /* box-shadow: 5px 0px  10px rgb(255, 255, 255); */
+    border-top: 5vh solid rgb(53, 161, 255);
+    border-bottom: 1vh solid rgb(255, 255, 255);
+    border-top-right-radius: 5px;
+  }
+
+  
+  .column2 {
+    float: left;
+    width: 55%;
+    
+    margin-left: 22.5%;
+    margin-top: 5vh;
+  }
+  .column3 {
+    float: left;
+    width: 20%;
+    padding: 15px;
+    height: 100%;
+    position: fixed;
+    right: 0;
+    background-color: rgb(0, 4, 255);
+    /* box-shadow: -5px 0px 10px rgb(255, 255, 255); */
+    border-top: 5vh solid rgb(53, 161, 255);
+    border-bottom: 1vh solid rgb(255, 255, 255);
+    border-top-left-radius: 5px;
+  }
+ 
+  .column1 {
+    overflow-y: scroll;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* Internet Explorer and Edge */
+}
+
+.column1::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, and Opera */
+}
+  .test{
+      margin-bottom: 10vh;
+  }
+  .test-head{
+    background-color: rgb(255, 255, 255);
+    padding: 15px;
+    z-index: 5;
+    position: relative;
+    box-shadow: 1px 1px 3px rgba(20, 3, 255, 0.2), -1px -1px 3px rgba(20, 3, 255, 0.2);
+    /* height: 20p; */
+  }
+  .test-head .logo{
+      display: inline;
+      background-color: blue;
+      color: aliceblue;
+      padding: 5px;
+      cursor: pointer;
+      border-radius: 10%;
+      box-shadow: 1px 1px 1px black, -1px -1px 1px black;
+      margin-right: 5vw;
+  }
+
+
+  
+  .test-head .header{
+      font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  }
+  
+  .test-content{
+      max-width: 90%;
+      margin: auto;
+      height: 30vh;
+      overflow-y: scroll;
+      background-color: rgb(255, 255, 255);
+      position: relative;
+      margin-top: -20px;
+      padding: 10px;
+      box-shadow: 2px 2px 3px rgb(218, 235, 255), -2px -2px 3px rgb(218, 235, 255);
+  }
+  
+  /* Clear floats after the columns */
+  .row::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  .header ul{
+      list-style-type: none;
+      line-height: 10vh;
+  }
+   
+  .header li{
+      color: aliceblue;
+      font-family: 'Courier New', Courier, monospace;
+      font-weight: 700;
+      text-align: left;
+      
+  }
+  .header li a{
+      color: aliceblue;
+      text-decoration: none;
+  }
+  .header i{
+      font-size: xx-large;
+  }
+  .content{
+      background-color: white;
+      border: 0.5px solid  rgb(41, 92, 231);
+      padding: 10px;
+      position: relative;
+      border-radius: 5px;
+      box-shadow: 1px 1px 1px black;
+      margin-bottom: 2%;
+      margin-top: 2%;
+      height: 6vh;
+  }
+  .content .test-link{
+      position: absolute;
+      right: 5%;
+      /* float: right; */
+      /* padding: 10px; */
+  }
+  .content button{
+      border: none;
+      cursor: pointer;
+      /* font-size: larger; */
+      padding: 10px;
+      margin-top: -10px;
+      background-color: blue;
+      color: aliceblue;
+      font-family: 'Courier New', Courier, monospace;
+  }
+  .test-decsripion{
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
+      color: brown;
+      /* background-color: black; */
+      position: absolute;
+      width: 70%;
+      
+  }
+  .school_logo{
+      border-radius: 10px;
+      max-width: 50%;
+      box-shadow: 1px 1px 2px white, -1px -1px 2px white;
+      margin-left: 25%;
+  }
+  
+  /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+  @media screen and (max-width:600px) {
+    .column {
+      width: 100%;
+    }
+  }
+
+  .notification{
+    margin: 4%;
+    padding: 2%;
+    text-indent: 20px;
+    text-align: justify;
+    background-color: rgb(255, 253, 135);
+    border-radius: 5px;
+    box-shadow: 1px 1px 2px rgb(129, 124, 124), -1px -1px 2px rgb(129, 124, 124);
+    font-family:Georgia, 'Times New Roman', Times, serif;
+  }
+  .latest-notification{
+    font-size: 40px;
+    position: fixed;
+    /* left: 80%; */
+  }
+
+  .student-profile-pic img{
+    max-width: 100%;
+    border-radius: 10px;
+    float: left;
+    box-shadow: 1px 1px 4px rgb(117, 117, 117), -1px -1px 4px rgb(117, 117, 117);
+    margin-bottom: 5vh;
+  }
+  .student-profile-pic{
+    /* background-color: aqua; */
+    position: relative;
+    margin-top: 3vh;
+    max-width: 20%;
+    float: left;
+  }
+
+  .student-profile-pic button, .student-resources button{
+    width: 90%;
+    height: 5vh;
+    margin-left: 5%;
+    border-radius: 10px 0px 10px 0px;
+    cursor: pointer;
+    background-color: blue;
+    color: aliceblue;
+    font-family: cursive;
+    font-weight: 700;
+    border: none;
+    outline: none;
+    box-shadow: 1px 1px 1px rgb(128, 126, 126)
+  }
+
+  .student-profile-info{
+    background-color: rgb(0, 162, 255);
+    width: 70%;
+    float: right;
+    height: fit-content;
+    border-radius: 10px;
+  }
+
+  .student-profile-info table th{
+      background-color: rgb(255, 255, 255);
+      padding: 10px;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+  }
+
+
+  .student-profile-info table{
+      border-spacing: 30px;
+  }
+
+  .student-profile-info table td{
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    padding: 15px;
+    font-size: small;
+  }
+
+  .student-profile-info table td,
+  .student-profile-info table th{
+    border-radius: 5px;
+    box-shadow: 1px 1px 2px rgb(77, 75, 75), -1px -1px 2px rgb(77, 75, 75);
+  }
+
+  .student-resources{
+    width: 40%;
+    background-color: rgb(255, 255, 255);
+    height: 40vh;
+    margin-bottom: 5vh;
+    border-radius: 10px;
+    box-shadow: 1px 1px 5px rgb(82, 80, 80) ;
+  }
+  .resources{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex-grow: 1 1;
+    justify-content: space-around;
+  }
+  .student-resources .description-space{
+    height: 50%;
+    background-color: blue;
+    border-radius: 10px;
+    box-shadow: 0px 5px 1px black;
+    padding: 15px;
+    text-overflow: ellipsis;
+    text-wrap: nowrap;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+
+  .student-resources .colored-space{
+    height: 30%;
+  }
+  .description-space h3{
+    font-style: italic;
+    font-family: cursive;
+    color: aliceblue;
+  }
+
+
+  /* .submit-label {
+    display: block;
+    margin-bottom: 10px;
+} */
+
+.submit-file,
+.submit-select,
+.submit-button,
+.submit-label {
+    display: block;
+    margin-bottom: 20px;
+    width: 95%;
+    margin: auto;
+    /* margin-bottom: 5vh; */
+    background-color: rgb(82, 142, 255);
+    padding: 10px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+.submit-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.submit-button:hover {
+    background-color: #45a049;
+}
+
+.submit-select, .submit-file{
+  margin-bottom: 5vh;
+  border-radius: 5px;
+}
+
+.student-submit-form{
+  background-color: white;
+  box-shadow: 1px 1px 5px rgb(143, 142, 142), -1px -1px 5px rgb(143, 142, 142);
+  padding: 30px;
+  width: 70%;
+  margin: auto;
+  /* height: 50vh; */
+}
+.submit-label{
+  text-align: center;
+  margin-bottom: 5px;
+  border-top: 1px solid blue;
+  background-color: rgb(255, 255, 255);
+}
+.student-viewer{
+  height: 100%;
+  width: 100%;
+  background-color: #c2daff;
+}
+.profile_pic{
+  padding: 10px;
+  border-radius: 5px;
+  color:aliceblue;
+  width: 100%;
+  font-size: 15px;
+  margin-bottom: 5vh;
+}
+
+input[type='file'].profile_pic{
+  font-family: 'Courier New', Courier, monospace;
+  background-color: blue;
+
+}
+
+.profile_label{
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 14px;
+  text-align: center;
+}
+
+/* Flash message container */
+.flash-message {
+  padding: 10px 20px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Success flash message */
+.flash-message.success {
+  background-color: #28a745;
+  color: #fff;
+}
+
+/* Error flash message */
+.flash-message.danger {
+  background-color: #dc3545;
+  color: #fff;
+}
+
+/* Warning flash message */
+.flash-message.warning {
+  background-color: #ffc107;
+  color: #000;
+}
+
+/* Info flash message */
+.flash-message.info {
+  background-color: #17a2b8;
+  color: #fff;
+}
+
+.input-del-group{
+ padding: 15px; 
+ width: 80%;
+ margin: auto;
+ margin-top: 5vh;
+ background-color: #1028ffd2;
+ border-radius: 5px;
+ box-shadow: 1px 1px 3px rgb(199, 202, 253);
+}
+
+.input-del-text{
+  background-color: #ffffff;
+  padding: 10px;
+  font-family:cursive;
+  font-weight: 800;
+  border-radius: 5px;
+}
+
+.input-del{
+  padding: 8px;
+  font-size: 20px;
+  width: 88%;
+  border-radius: 5px;
+  margin-left: 1vw;
+  border: none;
+  outline: none;
+}
+
+.button-del{
+  padding: 10px;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 15px;
+  background-color: blue;
+  color: aliceblue;
+  font-weight: 900;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.button-del:hover{
+  background-color: rgba(0, 0, 255, 0.842);
+}

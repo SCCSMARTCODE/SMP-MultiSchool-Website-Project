@@ -1,4 +1,28 @@
+school name: SM@RT PROJECT
+Password: smart1234
+gmail-account: mightysmart@gmail.com
 
+
+student: Ela Gorge
+Password: gorge1234
+gmail: gorge@gmail.com
+
+student: Anthony Grace
+Password: anthony1234
+gmail: anth@gmail.com
+   
+
+smp school Password: 00000000
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
     <!-- registration -->
 
     <section id="registration">
@@ -189,3 +213,16 @@
             </div>
         </div>
     </footer>
+
+
+
+
+
+
+
+
+    <!-- <li><a href="{{ url_for('student_note') }}"><i class="fa-regular fa-bell"></i><small> Notification</small></a></li>
+            <li><a href="{{ url_for('school_submited_test') }}"><i class="fa-solid fa-file"></i><small> Submited Test</small></a></li>
+            <li><a href="{{ url_for('school_upload') }}"><i class="fa-solid fa-book"></i><small> Upload</small></a></li>
+            <li><a href="{{ url_for('school_profile') }}"><i class="fa-solid fa-user"></i><small> School Profile</small></a></li>
+             -->

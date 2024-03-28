@@ -3,19 +3,18 @@
 <!-- First template block1 -->
 {% block main %}
 <div class="grandcontainer">
-    
-<div class="mother_form_container">
-    <div class="col-md-8">
+    <div class="col-md-8"style="margin-left: 28.5%;">
         {% with messages = get_flashed_messages(with_categories=true) %}
-          {% if messages %}
+        {% if messages %}
             {% for category, message in messages %}
-              <div class="alert alert-{{ category }}">
+            <div class="flash-message {{ category }}" style="text-align: center; width: 30vw; margin-left: 5%;">
                 {{ message }}
-              </div>
+            </div>
             {% endfor %}
-          {% endif %}
+        {% endif %}
         {% endwith %}
       </div>
+<div class="mother_form_container">
     <div id="form_container">
         <form method="POST" action="">
             {{ form.hidden_tag() }}
