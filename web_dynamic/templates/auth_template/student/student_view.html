@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMP - {{ title }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='/styles/smp_student_dash_styles.css') }}">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='/images/smp1.ico') }}" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/e637a9e731.js" crossorigin="anonymous"></script>
+    <style>
+        .available{
+            position: sticky;
+            top: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="available test" >
+        <div class="available test-head">
+            <h2 class="logo"><i class="fa-solid fa-pen"></i><i class="fa-solid fa-file"></i></h2><span class="header">{{ desc }}</span>  
+        </div>
+        <div class="available test-content" style="height: 90vh;"><hr><hr>
+            <!-- dynamic section -->
+            <iframe src="{{ url_for('static', filename=path) }}" frameborder="0" class="student-viewer"></iframe>
+         </div>
+    </div>
+</body>
+</html>

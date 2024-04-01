@@ -1,0 +1,259 @@
+{% extends "unauth_template/first_layout.html" %}
+
+<!-- First template block1 -->
+{% block main %}
+    <!-- home -->
+    <section id="home">
+        <h2>Discover Your Future With Us, And Build Your Career</h2>
+        <h2>Join Us and Simplify Education for Schools and Students</h2>
+        <p>Register your school with us and provide an easy study life for your students. Whether it's an education, tech, or music school, we cater to all educational fields.</p>
+        
+
+        <div class="btn">
+            <a class="skyblue" href="{{ url_for('school_reg') }}">Register your School</a>
+            <a class="skyblue" href="{{ url_for('student_reg') }}">Register as a Student</a>
+        </div>
+    </section>
+
+    <!--features-->
+    <section id="features">
+        <h1>Amazing Features</h1>
+        <p>We have training courses that teach the main concepts of all subjects. Best for Universities, Schools and Kindergarten as we have included demos for all education niches.</p>
+
+        <div class="feature-base">
+            <div class="fea-box container">
+                <i class="fa-solid fa-person-chalkboard"></i>
+                <h3>Skilled Instructors</h3>
+                <p>We are dedicated to developing Instuctors who are skilled.</p>
+            </div>
+
+                <div class="fea-box container">
+                    <i class="fa-solid fa-book-open"></i>
+                    <h3>Online Courses</h3>
+                    <p> Free online Software Development courses to acquire useful skills.</p>
+                </div>
+
+                    <div class="fea-box container">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                        <h3>Scholarship facility</h3>
+                        <p>Students who are granted with scholarship award certificates usually earn what they receive.</p>
+                    </div>
+                    <div class="fea-box container">
+                        <i class="fa-solid fa-certificate"></i>
+                        <h3>Top Certificates</h3>
+                        <p>Once you complete a course, you will be able to claim your Certification!</p>
+     </div>
+     </div>     
+  </section>
+    <!-- features end -->
+
+    <!--course-->
+ <section id="course">
+ <h1>Top Global Courses</h1>
+ <p>We have training courses that teach the main concepts with flexibility and mobile readiness in mind.</p>
+ <div class="course-box">
+        <div class="courses">
+        <img src="../../static/images/finance-1.png" alt="">
+        <div class="details">
+            <span>Updated 29/3/24</span>
+            <h5>Finance and Accounting</h5>
+            <div class="star">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star-half-stroke"></i>
+                <span>(392)</span>
+            </div>
+        </div>
+        <div class="cost">
+            $39.99
+        </div>
+    </div>
+    <div class="courses">
+        <img src="../../static/images/bizz.jpg" alt="">
+        <div class="details">
+            <span>Updated 29/3/24</span>
+            <h5>Business and Marketing</h5>
+            <div class="star">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star-half-stroke"></i>
+                <span>(392)</span>
+            </div>
+        </div>
+        <div class="cost">
+            $39.99
+        </div>
+    </div>
+    <div class="courses">
+        <img src="../../static/images/music.jpg" alt="">
+        <div class="details">
+            <span>Updated 29/3/24</span>
+            <h5>MUSIC</h5>
+            <div class="star">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star-half-stroke"></i>
+                <span>(392)</span>
+            </div>
+        </div>
+        <div class="cost">
+            $39.99
+        </div>
+    </div>
+
+            <div class="courses">
+                <img src="../../static/images/python vs c++ images.jpg" alt="">
+                <div class="details">
+                    <span>Updated 29/3/24</span>
+                    <h5>Front-end and Backend Courses</h5>
+                    <div class="star">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                        <span>(392)</span>
+                    </div>
+                </div>
+                <div class="cost">
+                    $39.99
+                </div>
+            </div>
+            <div class="courses">
+                <img src="../../static/images/images3.jpg" alt="">
+                <div class="details">
+                    <span>Updated 29/3/24</span>
+                    <h5>C++, Python and Machine learning</h5>
+                    <div class="star">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                        <span>(292)</span>
+                    </div>
+                </div>
+                <div class="cost">
+                    $45.99
+                </div>
+            </div>
+        
+            <div class="courses">
+                <img src="../../static/images/classroom.jpg" alt="">
+                <div class="details">
+                    <span>Updated 29/3/24</span>
+                    <h5>Basic subjects for kids</h5>
+                    <div class="star">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                        <span>(292)</span>
+                    </div>
+                </div>
+                <div class="cost">
+                    $49.99
+                </div>
+            </div>
+            <div class="courses">
+                <img src="../../static/images/math.jpg" alt="">
+                <div class="details">
+                    <span>Updated 29/3/24</span>
+                    <h5>Mathematics, Futher Maths, and Chemistry</h5>
+                    <div class="star">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                        <span>(292)</span>
+                    </div>
+                </div>
+                <div class="cost">
+                    $49.99
+                </div>
+            </div>
+            <div class="courses">
+                <img src="../../static/images/eng1.jpg" alt="">
+                <div class="details">
+                    <span>Updated 29/3/24</span>
+                    <h5>English, Literature , and Ecoomics</h5>
+                    <div class="star">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                        <span>(292)</span>
+                    </div>
+                </div>
+                <div class="cost">
+                    $49.99
+                </div>
+            </div>
+            <div class="courses">
+                <img src="../../static/images/bio1.jpg" alt="">
+                <div class="details">
+                    <span>Updated 29/3/24</span>
+                    <h5>Biology and Chemistry</h5>
+                    <div class="star">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                        <span>(292)</span>
+                    </div>
+                </div>
+                <div class="cost">
+                    $38.99
+                </div>
+            </div>
+            </div>
+        </div>
+    </section>
+   
+
+    <footer class="footer home-footer">
+        <div class="container home-container">
+            <div class="row home-row">
+                <div class="col-md-4 home-col-md-4">
+                    <h5 class="home-heading">Company</h5>
+                    <ul class="home-list">
+                        <li><a href="{{ url_for('about_us') }}" class="home-link">About Us</a></li>
+                        <li><a href="{{ url_for('contact') }}" class="home-link">Contact Us</a></li>
+                        <li><a href="#" class="home-link">Privacy Policy</a></li>
+                        <li><a href="#" class="home-link">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 home-col-md-4">
+                    <h5 class="home-heading">Services</h5>
+                    <ul class="home-list">
+                        <li><a href="{{ url_for('school_reg') }}" class="home-link">School Registration</a></li>
+                        <li><a href="{{ url_for('student_reg') }}" class="home-link">Student Registration</a></li>
+                        <li><a href="{{ url_for('login') }}" class="home-link">Login</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 home-col-md-4">
+                    <h5 class="home-heading">Contact</h5>
+                    <ul class="home-list">
+                        <li>Email: <a href="mailto:info@multischool.com" class="home-link">info@multischool.com</a></li>
+                        <li>Phone: <span class="home-text">+2349017627228</span></li>
+                        <li>WhatsApp: <span class="home-text">+2349017627228</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    
+    
+<!-- First template block1 -->
+{% endblock main %}

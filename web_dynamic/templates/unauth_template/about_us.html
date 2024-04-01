@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMP - {{ title }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='/styles/home.css') }}">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='/images/smp1.ico') }}" type="image/x-icon">
+    <!-- font awesome cdn links -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- google font links -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Raleway:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fontawesome.com/icons/square-facebook?f=brands&s=solid"> 
+   <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+
+    <style>
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        h2 {
+            font-size: 28px;
+            color: #333;
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        /* #description {
+            margin-bottom: 30px;
+        } */
+        #description {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 50px 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .member {
+            text-align: center;
+            margin-bottom: 30px;
+            text-align: center;
+            width: 400px;
+            margin: 20px;
+            border: 1px solid #ccc; /* Border color */
+            border-radius: 10px; /* Rounded corners */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow effect */
+            padding: 20px; /* Padding around content */
+            margin-bottom: 20px; /* Spacing between experts */
+        }
+
+        .member img {
+            width: 300px;
+            border-radius: 20px;
+            width: 150px;
+            height: 150px;
+            margin-bottom: 20px;
+        }
+
+        .member h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .member p {
+            font-style: italic;
+            margin-bottom: 15px;
+            font-size: 18px;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .social-icons a {
+            margin-right: 10px;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width:
+             100%;
+        }
+        p {
+            font-size: 18px;
+            color: #666;
+            line-height: 1.6;
+        }
+        #team {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 50px 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+    </style>
+    
+</head>
+<body>
+
+    <!--navigation-->
+    
+    <nav>
+        <!-- <img src="../../static/images/smp_page1.png" alt="smp_logo" id="smp_logo"> -->
+        <!-- <a href="{{ url_for('home') }}" class="logolink">SMP@SCHOOL</a> -->
+        <span class="logo"><span class="head">SMP</span> <span class="text">Multischool Website</span></span>
+        
+        <div class="navigation">
+            <ul class="menu">
+                <li><a href="{{ url_for('home') }}">Home</a></li>
+                <li><a href="{{ url_for('about_us') }}">About</a></li>
+                <!-- <li><a href="#">Blog</a></li> -->
+                <!-- <li><a href="#">Courses</a></li> -->
+                <li><a href="{{ url_for('contact') }}">Contact</a></li>
+                <!-- <li></li> -->
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">Sign up</a>
+                    <div class="dropdown-content">
+                        <a href="{{ url_for('login') }}">Login</a>
+                        <a href="{{ url_for('school_reg') }}">School-Registration</a>
+                        <a href="{{ url_for('student_reg') }}">Student-Registration</a>
+                    </div>
+                </li>
+                
+            </ul>
+        </div>
+    </nav>
+
+<!-- First template block1 -->
+
+<main>
+     
+    <section id="description">
+        <h2>Our Mission</h2>
+        <p>Welcome to MultiSchool, an innovative platform designed to revolutionize the educational experience. At MultiSchool, we aim to create a seamless and efficient ecosystem that connects schools, students, and educators.</p>
+        <p>Our platform offers a range of features including school registration, student enrollment, course management, and communication tools. Whether you're a school administrator, teacher, or student, MultiSchool provides the tools and resources you need to succeed.</p>
+        <p>Join us as we embark on a journey to transform education and empower the next generation of learners. Together, we can build a brighter future.</p>
+    </section>
+    <hr><hr><hr>
+    <h2>Meet Our Team</h2>
+    <section id="team">
+        
+        <div class="member profile">
+            <img src="../../static/images/moses1.jpg" alt="John Doe">
+            <h3>Moses</h3>
+            <p>Developer contributing to both backend and frontend tasks, with expertise in Python, JavaScript, HTML, and CSS.</p>
+            <div class="social-icons pro-link">
+                <a href="#"><i class="fa-brands fa-square-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-square-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-square-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+        </div>
+        <div class="member profile">
+            <img src="../../static/images/peace11.jpg" alt="John Doe">
+            <h3>Peace</h3>
+            <p>Lead Frontend Developer, focusing on crafting engaging user experiences using HTML, CSS, JavaScript, and React.js.</p>
+            <div class="social-icons pro-link">
+                <a href="#"><i class="fa-brands fa-square-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-square-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-square-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+        </div>
+        <div class="member profile">
+            <img src="../../static/images/smart.jpg" alt="John Doe">
+            <h3>SCCSM@RTCODE</h3>
+            <p>Lead Developer, specializing in backend development and playing a key role in database management and server-side logic.</p>
+            <div class="social-icons pro-link">
+                <a href="#"><i class="fa-brands fa-square-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-square-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-square-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+        </div>
+        <!-- Add more team members as needed -->
+    </section>
+</main>
+<footer>
+    <p>&copy; 2024 <b>SMP</b> <small>MultiSchool Website</small></p>
+</footer>
+
+<!-- First template block1 -->
+    
+
+<!-- Bootstrap JavaScript and dependencies -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>

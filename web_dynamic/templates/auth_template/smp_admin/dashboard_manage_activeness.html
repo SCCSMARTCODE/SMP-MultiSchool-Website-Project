@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+    <link rel="shortcut icon" href="{{ url_for('static', filename='/images/smp1.ico') }}" type="image/x-icon">
+    <link rel="stylesheet" href="{{ url_for('static', filename='/styles/smp_admin_dash_styles.css') }}">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    
+
+</head>
+<body style="background-color: rgb(180, 180, 180);">
+    <header>
+        <div class="">
+            <div class="head">
+                <h1>SMP Admin Dashboard</h1><hr><hr>
+            </div>
+            
+           
+            <nav class="">
+                <ul>
+                    <li><a href="{{ url_for('home') }}" class="active">home</a></li>
+                    <li><a href="{{ url_for('admin_dashboard1') }}">Active Schools</a></li>
+                    <li><a href="{{ url_for('admin_dashboard2') }}">Inactive Schools</a></li>
+                    <li><a href="{{ url_for('admin_dashboard3') }}">Manage Activeness</a></li>
+                    <li><a href="{{ url_for('admin_dashboard4') }}">Contact Notification</a></li>
+                    <li><a href="{{ url_for('logout') }}" class="logout">logout</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main >
+        <div class="col-md-8">
+            {% with messages = get_flashed_messages(with_categories=true) %}
+              {% if messages %}
+                {% for category, message in messages %}
+                  <div class="alert alert-{{ category }}" style="text-align: center; width: 30vw; margin-left: 60%;">
+                    {{ message }}
+                  </div>
+                {% endfor %}
+              {% endif %}
+            {% endwith %}
+          </div>
+        <form class="activeform" method="post" action="">
+            <div class="form-group">
+                <label for="schoolId">School ID:</label>
+                <input type="text" class="form-control" id="schoolId" placeholder="Enter School ID" name="id" required>
+            </div>
+            <div class="form-group">
+                <label for="status">Update Status:</label>
+                <select class="form-control" id="status" name="status" required>
+                    <option value="1">Active</option>
+                    <option value="0">Inactive</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </main>
+    
+
+    <footer>
+        <!-- Footer Content Goes Here -->
+    </footer>
+</body>
+</html>
+
+ 

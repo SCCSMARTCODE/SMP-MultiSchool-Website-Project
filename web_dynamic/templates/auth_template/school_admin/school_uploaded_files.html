@@ -1,0 +1,32 @@
+{% extends 'auth_template/school_admin/third_layout.html' %}
+
+{% block main %}
+   <div class="available test">
+       <div class="available test-head">
+           <h2 class="logo"><i class="fa-solid fa-pen"></i><i class="fa-solid fa-book"></i></h2><span class="header">School Files</span>  
+       </div>
+       <div class="available test-content" style="min-width: 95%; min-height: 85vh;"><hr><hr>
+           <!-- dynamic section -->
+            <table class="student_status_table" border="1px">
+                <thead>
+                    <th class="name" style="width: 30%;">Description</th>
+                    <th class="id" style="width: 30%;">ID</th>
+                    <th class="name" style="width: 20%;">class</th>
+                    <th class="name" style="width: 20%;">Category</th>
+                </thead>
+                <tbody>
+                    {% for file in files %}
+                            <tr>
+                            <td class="name" title="{{ file.description}}" style="width: 30%;">{{ file.description }}</td>
+                            <td class="id" title="{{ file.id }}" style="width: 30%;">{{ file.id }}</td>
+                            <td class="name" title="{{ file.class_.name }}" style="width: 20%; background-color: rgba(243, 243, 243, 0.342);">{{ file.class_.name }}</td>
+                            <td class="name" title="{{ file.file_category }}" style="width: 20%; background-color: rgba(245, 245, 245, 0.466);">{{ file.file_category }}</td>
+                            </tr>
+                    {% endfor %}
+                </tbody>
+
+            </table>
+            
+       </div>
+   </div>
+{% endblock main %}

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quick Notification</title>
+    <link rel="shortcut icon" href="{{ url_for('static', filename='/images/smp1.ico') }}" type="image/x-icon">
+    <link rel="stylesheet" href="{{ url_for('static', filename='/styles/pending_acc.css') }}">
+</head>
+<body class="pendbody">
+    <div class="container1">
+        <h1 class="hpend">SMP!   <small>Your Account is Pending Validation</small></h1>
+        <p class="ppend">{{ validator }} received your account creation request. Your account is currently pending validation.</p>
+        <p class="ppend">An email will be sent to {{ mail }}. Please check your inbox (and spam/junk folder) for further instructions.</p>
+        <p class="ppend">You will be redirected back to the home page. <span class="notify">ASAP!</span></p>
+    </div>
+
+    <!-- JavaScript for redirection -->
+    <script>
+        setTimeout(function() {
+            window.location.href = "{{ url_for('home') }}";
+        }, 9000); // Redirect after 5 seconds (5000 milliseconds)
+    </script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>SMP - {{ title }}</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SMP - {{ title }}</title>
+{% block bootstrap %}{% endblock bootstrap %}
+<link rel="stylesheet" href="{{ url_for('static', filename='/styles/smp_student_dash_styles.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='/styles/smp_school_style.css') }}">
+<link rel="shortcut icon" href="{{ url_for('static', filename='/images/smp1.ico') }}" type="image/x-icon">
+
+
+<script src="https://kit.fontawesome.com/e637a9e731.js" crossorigin="anonymous"></script>
+{% block style %}{% endblock style %}
+</head>
+<body id="body">
+
+<div class="row">
+  <div class="column1">
+    <div class="header">
+        <ul>
+            <li><a href="{{ url_for('school_dash') }}"><i class="fa-solid fa-pen-to-square"></i><small> Dashboard</small></a></li>
+            <li><a href="{{ url_for('school_active_students') }}"><i class="fa-solid fa-user"></i><small> Active Students</small></a></li>
+            <li><a href="{{ url_for('school_inactive_students') }}"><i class="fa-regular fa-user"></i><small> Inactive Students</small></a></li>
+            <li><a href="{{ url_for('student_status_manipulator') }}"><i class="fa-regular fa-share-from-square"></i><small> Manipulate Info</small></a></li>
+            <li><a href="{{ url_for('school_classes') }}"><i class="fa-solid fa-feather"></i><small> Classes</small></a></li>
+            <li><a href="{{ url_for('school_upload') }}"><i class="fa-solid fa-sliders"></i><small> Upload & Delete</small></a></li>
+            <li><a href="{{ url_for('school_uploaded_files') }}"><i class="fa-solid fa-book"></i><small> Uploaded Files</small></a></li>
+            <li><a href="{{ url_for('submitted_test_info') }}"><i class="fa-solid fa-file"></i><small> Submitted Test Info</small></a></li>
+            <li><a href="{{ url_for('school_send_notification') }}"><i class="fa-solid fa-envelope"></i><small> Send notification</small></a></li>
+            <li><a href="{{ url_for('school_control_registration') }}"><i class="fa-solid fa-gear"></i><small> Control Registration</small></a></li>
+        </ul>
+      </div>
+      
+    
+  </div>
+  
+  <div class="column2">
+        {% block main %}
+        {% endblock main %}
+  </div>
+  
+  <div class="column3">
+    <h2 class="username"><small>{{ current_user.name }}</small></h2>
+    <img src="{{ url_for('static', filename='Files/user_profile_pics/' + pic_name) }}" alt="" class="school_logo">
+
+    <div class="smp_help_and_support">
+      <hr><hr>
+      <h5>Connect with SMP for Assistance and Support</h5>
+      <a href="mailto:sccsmart2472gmail.com" target="_blank"><i class="fa-solid fa-envelopes-bulk mail"></i>SMP@gmail.com</a>
+      <a href="tel:+2349017627228" target="_blank"><i class="fa-solid fa-phone-volume phone"></i> Phone</a>
+      <a href="https://twitter.com/EmmanuelAy85364" target="_blank"><i class="fa-brands fa-square-x-twitter x"></i> Twitter</a>
+      <a href="https://www.linkedin.com/in/emmanuelayobami/" target="_blank"><i class="fa-brands fa-linkedin linkedin"></i> LinkedIn</a>
+      <a href="tel:+2349017627228" target="_blank"><i class="fa-brands fa-square-whatsapp whatsapp"></i> WhatsApp</a>
+      <hr><hr>
+    </div>
+    <div class="logout">
+      <a href="{{ url_for('logout') }}"><button type="button">logout</button></a>
+    </div>
+  </div>
+
+</div>
+{% block script %}{% endblock script %}
+</body>
+</html>
+
+

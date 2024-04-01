@@ -1,0 +1,228 @@
+school name: SM@RT PROJECT
+Password: smart1234
+gmail-account: mightysmart@gmail.com
+
+
+student: Ela Gorge
+Password: gorge1234
+gmail: gorge@gmail.com
+
+student: Anthony Grace
+Password: anthony1234
+gmail: anth@gmail.com
+   
+
+smp school Password: 00000000
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+    <!-- registration -->
+
+    <section id="registration">
+        <div class="reminder">
+            <p>Get 100-plus Courses Online For Free</p>
+            <h1>Register To Get It</h1>
+            <div class="time">
+                <div class="date">
+                    20 <br> Days
+                </div>
+                <div class="date">
+                    10 <br> Hours
+                </div>
+                <div class="date">
+                   15 <br> Minutes
+                </div>
+                <div class="date">
+                    59 <br> Seconds
+                </div>
+            </div>
+        </div>
+
+        <div class="form">
+            <h3>Login To Your Account</h3>
+            <input type="text" placeholder="Email Address" name="" id="">
+            <input type="text" placeholder="Password" name="" id="">
+            <div class="btn">
+                <a class="yellow" href="#">Login</a>
+
+            </div>
+        </div>
+
+    </section>
+
+    <!-- profiles -->
+    
+    <section id="experts">
+        <h1>Team Experts</h1>
+        <p>Our aim is to harness learning to make all education and skills training available to anyone, anywhere through online</p>
+        
+
+    </section>
+
+
+
+
+    <!-- footer -->
+<footer>
+    <div class="footer-col">
+        <h3>POPULAR PROGRAMS</h3>
+        <li>Teaching & Academics</li>
+        <li>Engineering & Construction</li>
+        <li>Personal Development</li>
+        <li>Sales & Marketing</li>
+        <li>Business</li>
+        <li>Management</li>
+        <li>English</li>
+        <li>health Education</li>
+        <li>Mathematics</li>
+        <li>Language</li>
+        <li>Science</li>
+        <li>Humanities</li>
+        <li>Computer Science</li>
+        <li>Arts & Design</li>
+        <li>Accounting</li>
+        <li>Finance</li>
+        <li>Real Estate</li>
+        <li>project Management</li>
+        <li>Web Development</li>
+        <li>Front-end & Back-end Development</li>
+        <li>Machine learning</li>
+        <li>Artificial Intelligence</li>
+        <li>Robotics</li>
+        <li>Game Development</li>
+        <li>Mobile App Development</li>
+        <li></li>Software Development</i>
+        <li>UI/UX Design></li>
+        <li>pythonprogramming</li>
+        <li>IT & Software</li>
+        <li>Chemistry</li>
+        <li>physics</li>
+        <li>Music</li>
+        <li>History</li>
+        <li>Geograpy</li>
+        <li>psychology</li>
+        <li>Engineering</li>
+        <li>Health & Fitness</li>
+        <li>photography</li>
+        <li>Architeture</li>
+        <li>Food & Nutrition</li>
+        <li>Human Resources</li>
+    </div>
+    <div class="footer-col">
+        <h3>POPULAR PROGRAMS</h3>
+        <li>Teaching & Academics</li>
+        <li>Engineering & Construction</li>
+        <li>Personal Development</li>
+        <li>Sales & Marketing</li>
+        <li>Business</li>
+        <li>Management</li>
+        <li>English</li>
+        <li>health Education</li>
+        <li>Mathematics</li>
+        <li>Language</li>
+        <li>Science</li>
+        <li>Humanities</li>
+        <li>Computer Science</li>
+        <li>Arts & Design</li>
+        <li>Accounting</li>
+        <li>Finance</li>
+        <li>Real Estate</li>
+        <li>project Management</li>
+        <li>Web Development</li>
+        <li>Front-end & Back-end Development</li>
+        <li>Machine learning</li>  
+        </div>
+        <div class="footer-col">
+        <h3>QUALITY FREE LEARNING</h3>
+        <li>Premium Learning</li>
+        <li></li>
+        <li>Personal Development</li>
+        <li>Sales & Marketing</li>
+        <li>Business</li>
+        <li>Management</li>
+        <li>English</li>
+        <li>health Education</li>
+        <li>Mathematics</li>
+        <li>Language</li>
+        <li>Science</li>
+        <li>Humanities</li>
+        <li>Computer Science</li>
+        <li>Arts & Design</li>
+        <li>Accounting</li>
+        <li>Finance</li>
+        <li>Real Estate</li>
+        <li>project Management</li>
+        <li>Web Development</li>
+        <li>Front-end & Back-end Development</li>
+        <li>Machine learning</li>
+        </div>
+        <div class="footer-col">
+        <h3>DISCOVER MORE</h3>
+        <li>eLearning Africa</li>
+        <li>Free Well-being Check up</li>
+        <li>Build Your Resumé</li>
+        <li>Discover Careers</li>
+        <li>SMP Profile</li>
+        <li>Become a partner</li>
+        <li>Help</li>
+        <li>Social Impact</li>
+        <li>Accessibility</li>
+        <li>Privacy</li>
+        <li>Blog</li>
+        <li>Manage Cookie Preferences</li>
+    </div>
+</footer>
+
+
+
+<footer class="home-footer">
+        <div class="home-container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5 class="home-heading">Company</h5>
+                    <ul class="home-list">
+                        <li><a href="#" class="home-link">About Us</a></li>
+                        <li><a href="#" class="home-link">Contact Us</a></li>
+                        <li><a href="#" class="home-link">Privacy Policy</a></li>
+                        <li><a href="#" class="home-link">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5 class="home-heading">Services</h5>
+                    <ul class="home-list">
+                        <li><a href="#" class="home-link">School Registration</a></li>
+                        <li><a href="#" class="home-link">Student Registration</a></li>
+                        <li><a href="#" class="home-link">Courses</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5 class="home-heading">Contact</h5>
+                    <ul class="home-list">
+                        <li>Email: <a href="mailto:info@multischool.com" class="home-link">info@multischool.com</a></li>
+                        <li>Phone: <span class="home-text">+1234567890</span></li>
+                        <li>WhatsApp: <span class="home-text">+1234567890</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+
+
+
+
+    <!-- <li><a href="{{ url_for('student_note') }}"><i class="fa-regular fa-bell"></i><small> Notification</small></a></li>
+            <li><a href="{{ url_for('school_submited_test') }}"><i class="fa-solid fa-file"></i><small> Submited Test</small></a></li>
+            <li><a href="{{ url_for('school_upload') }}"><i class="fa-solid fa-book"></i><small> Upload</small></a></li>
+            <li><a href="{{ url_for('school_profile') }}"><i class="fa-solid fa-user"></i><small> School Profile</small></a></li>
+             -->
