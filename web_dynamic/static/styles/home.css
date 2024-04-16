@@ -89,8 +89,7 @@ header {
 /*navigation*/
 nav {
     position: sticky;
-    width: fit-content;
-    
+    width: fit-content; 
     top: 0;
     justify-content: space-between;
     width: 100%;
@@ -102,10 +101,7 @@ nav {
     box-shadow: 1px 1px 1px rgb(0, 0, 0.15);
     z-index: 1;
 }
-/* nav img {
-    width: 100px;
-    cursor: pointer;
-} */
+ 
 nav .navigation ul {
     display: flex;
     justify-content: flex-end;
@@ -217,6 +213,16 @@ nav .navigation ul li a:hover{
     padding: 13px 0 7px 0;
     color: var(--color-bg1)
 }
+#features .fea-box li{
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--color-bg2);
+    text-indent: 10px;
+    border-top: 2px solid grey;
+    font-family: cursive;
+    font-weight: 900;
+}
+
 #features .fea-box p{
     font-size: 1rem;
     font-weight: 400;

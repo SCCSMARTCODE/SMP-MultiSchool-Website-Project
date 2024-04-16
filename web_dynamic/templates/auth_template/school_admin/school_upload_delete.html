@@ -31,7 +31,7 @@
 
                 <label for="submit_project_name" class="submit-label">Choose Class:</label>
                 <select id="submit_project_name" name="class" class="submit-select" required>
-                    {% for class in current_user.classes %}
+                    {% for class in classes %}
                         <option value="{{ class.id }}">{{ class.name }}</option>
                     {% endfor %}
                 </select>

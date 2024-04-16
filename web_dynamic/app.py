@@ -194,6 +194,7 @@ def login():
     if form.validate_on_submit():
         for user in storage.all('School').values():
             if user.gmail and user.password and form.gmail.data.lower() == user.gmail and bcrypt.check_password_hash(user.password, form.password.data):
+                print(user.status)
                 if user.status:
                     school_user = load_user(user.id)
                     login_user(school_user, remember=form.remember.data)
@@ -809,6 +810,10 @@ def submitted_test_info():
 def school_upload():
     from models.engine import storage
     from models.school_test import SchoolFiles
+    from models.sch_acc import Classes
+
+    session = storage.session()
+
     if request.method == 'POST':
         dir_path = f'static/Files/{current_user.name}'.replace(' ', '_')
 
@@ -818,7 +823,7 @@ def school_upload():
 
             if not os.path.exists(dir_path):
                 os.makedirs(dir_path)
-            print(request.form.get('class'))
+            # print(request.form.get('class'))
             new_file = SchoolFiles(
                 school_id=current_user.id,
                 description=request.form.get('description'),
@@ -846,8 +851,8 @@ def school_upload():
             else:
                 flash('File not found Error!', 'danger')
                 return redirect(url_for('school_upload'))
-
-    return render_template('auth_template/school_admin/school_upload_delete.html', title='Uploads', pic_name=get_school_pics())
+    classes = session.query(Classes).filter_by(school_id=current_user.id).all()
+    return render_template('auth_template/school_admin/school_upload_delete.html', title='Uploads', pic_name=get_school_pics(), classes=classes)
 
 
 @app.route('/unauthorized')
@@ -890,4 +895,4 @@ def send_message(receiver_gmail, subject, message):
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=False, host='0.0.0.0')

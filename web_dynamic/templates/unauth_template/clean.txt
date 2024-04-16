@@ -1,25 +1,61 @@
-school name: SM@RT PROJECT
-Password: smart1234
-gmail-account: mightysmart@gmail.com
+smp admin name: Sm@Rt Project
+Password: 00000000
+gmail-account: eayobami568@gmail.com
 
 
-student: Ela Gorge
-Password: gorge1234
-gmail: gorge@gmail.com
+school: Imperial College
+Password: empinsmp
+gmail: imperialcolledge@gmail.com
 
-student: Anthony Grace
-Password: anthony1234
-gmail: anth@gmail.com
-   
+student: Enwere Peace
+Password: eliglble29
+gmail: enwerempeace@gmail.com
 
-smp school Password: 00000000
+student: Emmanuel Ayobami
+Password: 11111111
+gmail: ayobamismp@gmail.com
+
+student: Moses Oyewumi
+password: moses05
+gmail: mosesoyewumi05@gmail.com
    
    
+<iframe width="560" height="315" src="https://www.youtube.com/embed/HWZnRPcCZ58" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
    
    
-   
-   
-   
+/*------------------------------------why choose us-------------------------------- */
+#why-choose-us {
+    padding: 50px 0;
+    background-color: #3d1c00; /* Dark brown background color */
+}
+
+.feature-box {
+    background-color: #4d2600; /* Slightly lighter brown for feature boxes */
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.feature-box img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px; /* Adjust border radius for a softer look */
+    object-fit: cover; /* Ensure the image covers the box without distortion */
+    width: 100px; /* Set a specific width for the image */
+    height: 100px; /* Set a specific height for the image */
+    filter: brightness(70%); /* Darken the image for a subtle effect */
+}
+
+.feature-box h3 {
+    margin-top: 15px;
+    color: white; /* White text color for better contrast */
+}
+
+.feature-box p {
+    font-size: 16px;
+    color: #ccc; /* Light gray text color for readability */
+}
+
    
    
    
