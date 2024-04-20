@@ -6,8 +6,6 @@ environ["DB_HOST"] = "localhost"
 environ["DB_USER"] = "smp_master"
 environ["DB_NAME"] = "smp_base_db"
 environ["DB_TYPE"] = "db"
-environ['SMP_GMAIL'] = 'sccsmart247@gmail.com'
-environ['SMP_GMAIL_PW'] = 'jemw amml ymty cukm'
 """This should be removed ASAP"""
 
 from flask import Flask, render_template, url_for, redirect, flash, request
